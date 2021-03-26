@@ -1,30 +1,21 @@
+import {Grid } from "@material-ui/core";
 import "./styles.css";
-import { Button, Typography } from "@material-ui/core";
-import { makeStyles } from "@material-ui/core/styles";
-
-const useStyles = makeStyles({
-  helloThereStyle: {
-    fontStyle: "oblique",
-    color: "orange",
-    fontSize: "30px"
-  },
-  buttonStyle: {
-    color: "green"
-  }
-});
-
+import Header from "./Components/Header/Header";
+import CardSection from "./Components/CardSection/CardSection"
+import CoffeeCard from "./Components/CoffeeCard/CoffeeCard"
 export default function App() {
-  const classes = useStyles();
   return (
-    <div className="App">
-      <Typography className={classes.helloThereStyle}>Hello there</Typography>
-      <Button
-        className={classes.buttonStyle}
-        variant="outlined"
-        color="secondary"
-      >
-        My Button
-      </Button>
-    </div>
+    <Grid container direction="column">
+    <Grid item>
+      <Header />
+    </Grid>
+      <Grid item container>
+        <Grid item xs={0} sm={2}/>
+        <Grid item xs={12} sm={8}>
+          <CardSection/>
+        </Grid>
+        <Grid item xs={0} sm={2}/>
+      </Grid>
+    </Grid>
   );
 }
