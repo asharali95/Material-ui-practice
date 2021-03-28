@@ -5,7 +5,6 @@ import CardSection from "./Components/CardSection/CardSection"
 import ButtonStyleTest from "./Components/ButtonStyleTest";
 
 export default function App() {
-  const bool = true
   return (
     // <Grid container direction="column">
     // <Grid item>
@@ -19,6 +18,6 @@ export default function App() {
     //     <Grid item xs={0} sm={2}/>
     //   </Grid>
     // </Grid>
-    <ButtonStyleTest bool={bool} restProps={{disabled :"disabled"}}/>
+    <ButtonStyleTest/>
   );
 }
