@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@material-ui/styles";
 import { Button } from "@material-ui/core";
-
+import classnames from "classnames"
 // const useStyles = makeStyles({
 //   buttonSyles: bool => {
 //     return {
@@ -18,19 +18,24 @@ import { Button } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   buttonSyles: {
     color: "white",
-    background: "black",
 
     [theme.breakpoints.up("sm")]: {
       color: "black",
-      background: "grey",
     },
   },
+  backgroundStyles:{
+    background: "black",
+
+    [theme.breakpoints.up("sm")]: {
+      background: "grey",
+    },
+  }
 }));
 const ButtonStyleTest = () => {
   const classes = useStyles();
   return (
     <div>
-      <Button fullWidth className={classes.buttonSyles}>This is button</Button>
+      <Button fullWidth className={classnames(classes.buttonSyles,classes.backgroundStyles)}>This is button</Button>
     </div>
   );
 };
