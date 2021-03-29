@@ -7,7 +7,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import CardHeader from "@material-ui/core/CardHeader";
 import { Avatar, CardActionArea, IconButton } from "@material-ui/core";
-import ShareIcon from "@material-ui/icons/Share";
+// import ShareIcon from "@material-ui/icons/Share";
 import CardMedia from '@material-ui/core/CardMedia';
 
 const useStyles = makeStyles({
@@ -42,7 +42,7 @@ export default function CoffeeCard({
         avatar={<Avatar className={classes.avatar} src={avatarUrl}></Avatar>}
         action={
           <IconButton aria-label="settings">
-            <ShareIcon />
+            {/* <ShareIcon /> */}
           </IconButton>
         }
         title={title}

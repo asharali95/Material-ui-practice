@@ -3,6 +3,7 @@ import "./styles.css";
 import Header from "./Components/Header/Header";
 import CardSection from "./Components/CardSection/CardSection"
 import ButtonStyleTest from "./Components/ButtonStyleTest";
+import ButtonComp from "./Components/Button/ButtonComp";
 
 export default function App() {
   return (
@@ -18,6 +19,9 @@ export default function App() {
     //     <Grid item xs={0} sm={2}/>
     //   </Grid>
     // </Grid>
-    <ButtonStyleTest/>
+   <div>
+    {/* <ButtonStyleTest/> */}
+    <ButtonComp/>
+  </div> 
   );
 }
